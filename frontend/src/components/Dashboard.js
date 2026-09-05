@@ -3,17 +3,26 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchResources } from '../redux/resourceSlice';
 import { Link } from 'react-router-dom';
 
-const ResourceCard = memo(({ resource }) => (
-  <div style={{ border: '1px solid black', padding: '10px', margin: '10px 0' }}>
-    <h3>{resource.title}</h3>
-    <p>{resource.description}</p>
-    <span style={{ backgroundColor: '#eee', padding: '5px' }}>{resource.subject}</span>
-    <br /><br />
-    <a href={`http://localhost:5000/${resource.fileUrl}`} target="_blank" rel="noreferrer">
-      View Material
-    </a>
-  </div>
-));
+const BACKEND_URL = 'https://project-backend-moamenn.onrender.com';
+
+const ResourceCard = memo(({ resource }) => {
+  // Ensure the file URL formats cleanly regardless of leading slashes
+  const fileUrl = resource.fileUrl?.startsWith('http')
+    ? resource.fileUrl
+    : `${BACKEND_URL}/${resource.fileUrl?.replace(/^\/+/, '')}`;
+
+  return (
+    <div style={{ border: '1px solid black', padding: '10px', margin: '10px 0' }}>
+      <h3>{resource.title}</h3>
+      <p>{resource.description}</p>
+      <span style={{ backgroundColor: '#eee', padding: '5px' }}>{resource.subject}</span>
+      <br /><br />
+      <a href={fileUrl} target="_blank" rel="noreferrer">
+        View Material
+      </a>
+    </div>
+  );
+});
 
 export default function Dashboard() {
   const dispatch = useDispatch();
