@@ -30,5 +30,6 @@ components - רכיבי ממשק משתמש מתעדכנים.
 ---
 
 ## קישורים לפרויקט החי
-צד הלקוח:https://moamen-io9m-q39ia149j-moamen11.vercel.app/login
+צד הלקוח: moamen-psi.vercel.app
+
 צד השרת https://project-backend-moamenn.onrender.com
