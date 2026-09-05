@@ -21,7 +21,7 @@ router.post('/', [auth, upload.single('file')], async (req, res, next) => {
 
     const resource = new Resource({
       ...req.body,
-      fileUrl: req.file.path,
+      fileUrl: `uploads/${req.file.filename}`,
       uploader: req.user._id
     });
     await resource.save();
