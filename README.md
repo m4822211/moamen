@@ -1,3 +1,11 @@
+---
+
+## קישורים לפרויקט החי
+צד הלקוח: moamen-psi.vercel.app
+
+צד השרת https://project-backend-moamenn.onrender.com
+
+
 # StudyHub - פלטפורמה לשיתוף תוכן לימודי
 
 StudyHub היא מערכת Full-End מתקדמת המיועדת לסטודנטים לשם שיתוף, ניהול והעלאה של חומרי לימוד וסיכומים אקדמיים.
@@ -27,9 +35,3 @@ components - רכיבי ממשק משתמש מתעדכנים.
 | `MONGO_URI` | מחלקת החיבור לבסיס הנתונים MongoDB Atlas | `mongodb+srv://<user>:<password>@cluster...` |
 | `JWT_SECRET` | מפתח סודי ליצירת אסימוני אימות (JWT) | `your_super_secret_jwt_key` |
 
----
-
-## קישורים לפרויקט החי
-צד הלקוח: moamen-psi.vercel.app
-
-צד השרת https://project-backend-moamenn.onrender.com
